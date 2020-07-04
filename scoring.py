@@ -24,7 +24,7 @@ class Match:
             self.nextGame()
 
     """
-        Method to check if current game over after a score
+        Method to check if current game is over after a point is scored
     """
     def isGame(self):
         for k1, v1 in self.scoreMap.items():
@@ -34,7 +34,7 @@ class Match:
         return None
 
     """
-        Method to check if set completed
+        Method to check if the set is complete
     """
     def isSet(self):
         for k1, v1 in self.gameMap.items():
@@ -44,7 +44,7 @@ class Match:
         return None
 
     """
-        Method to check if set is a tie
+        Method to check if the set has a tie
     """
     def isTie(self):
         for k1, v1 in self.gameMap.items():
@@ -54,7 +54,7 @@ class Match:
 
     """
         Method for when a game is over
-        Used to reset current game score, check if the set is won or change game mode to 'tied'
+        Used to reset current game score, check if the set is complete or change game mode to 'tied'
     """
     def nextGame(self):
         gameWonBy = self.isGame()
